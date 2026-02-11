@@ -1,15 +1,14 @@
 name: Daily NBA Data Refresh
 on:
   schedule:
-    - cron: '0 13 * * *'
-  workflow_dispatch:
+    - cron: '0 13 * * *' # 8:00 AM EST
+  workflow_dispatch: # The "Manual" button
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    # THIS LINE IS KEY:
     permissions:
-      contents: write
+      contents: write # IMPORTANT: This allows the bot to save files
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -30,5 +29,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add nba_all_stats.csv
+          # The '|| exit 0' prevents an error if the data hasn't changed
           git commit -m "Daily NBA Data Update" || exit 0
           git push
