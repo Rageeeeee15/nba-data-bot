@@ -3,13 +3,13 @@ name: Daily NBA Data Refresh
 on:
   schedule:
     - cron: '0 13 * * *' # Runs at 8:00 AM EST
-  workflow_dispatch:      # Allows manual button click
+  workflow_dispatch:      # Allows you to click "Run" manually
 
 jobs:
   run_bot:
     runs-on: ubuntu-latest
     permissions:
-      contents: write     # REQUIRED to save the CSV
+      contents: write     # REQUIRED
 
     steps:
       - name: Checkout code
@@ -20,19 +20,16 @@ jobs:
         with:
           python-version: '3.9'
 
-      # IMPORTANT: Install the new libraries
       - name: Install dependencies
         run: pip install pandas requests beautifulsoup4
 
-      # Run the file we just created
       - name: Run Scraper
         run: python scraper.py
 
-      # Save the CSV back to the repo
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add nba_predictions_today.csv
+          git add nba_all_stats.csv
           git commit -m "Daily NBA Update" || exit 0
           git push
