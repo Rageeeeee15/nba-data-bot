@@ -1,9 +1,8 @@
-Player,Line,Boost,AI_Proj,Edge,Grade
-Damian Lillard,28.3,6.5,34.8,23.0%,🔥 ELITE
-Myles Turner,17.1,5.0,22.1,29.2%,🔥 ELITE
-Jalen Williams,23.6,6.0,29.6,25.4%,🔥 ELITE
-Kyrie Irving,26.1,5.0,31.1,19.2%,🔥 ELITE
-Tyler Herro,21.4,4.5,25.9,21.0%,🔥 ELITE
-Tyrese Maxey,26.9,6.5,33.4,24.2%,🔥 ELITE
-LeBron James,25.4,0.0,25.4,0.0%,❌ PASS
-Stephen Curry,27.1,0.0,27.1,0.0%,❌ PASS
+Date,Player,Vegas_Line,AI_Boost,AI_Proj,Grade
+2026-02-12,Damian Lillard,28.5,0.0,28.5,❌ PASS
+2026-02-12,Myles Turner,17.5,0.0,17.5,❌ PASS
+2026-02-12,Jalen Williams,23.5,0.0,23.5,❌ PASS
+2026-02-12,Kyrie Irving,26.5,0.0,26.5,❌ PASS
+2026-02-12,Tyler Herro,21.5,4.5,26.0,🔥 ELITE
+2026-02-12,Tyrese Maxey,26.5,0.0,26.5,❌ PASS
+2026-02-12,Luka Doncic,33.5,0.0,33.5,❌ PASS
